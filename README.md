@@ -14,4 +14,4 @@ In the tab "Sales", the user can see the sales of each date.
 
 In the tab "Products", the user can see the products created, their information and also add edit or delete a product.
 
-All this was deployed and is it possible to see it in te following url
+All this was deployed and is it possible to see it in te following url:https://clothing-business-front.vercel.app/
