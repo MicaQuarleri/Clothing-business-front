@@ -55,7 +55,10 @@ const ModalAccount = ({
   const accountSale = (event) => {
     event.preventDefault();
     if (errorDni === "") {
-      const totalSale = customerSelected.totalSale + saleCredit;
+      let totalSale = 0;
+      if (customerSelected.totalSale !== undefined) {
+        totalSale = customerSelected.totalSale + saleCredit;
+      }
       const data = { dni: dniValue, totalSale: totalSale };
       dispatch(updateCustomer(data));
       closeModalAccountSave();

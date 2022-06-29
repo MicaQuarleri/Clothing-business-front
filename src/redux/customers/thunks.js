@@ -65,6 +65,7 @@ export const addCustomer = (data) => (dispatch) => {
       last_name: data.lastName,
       email: data.email,
       phone: data.phone,
+      totalSale: data.totalSale,
     }),
   })
     .then((data) => {
