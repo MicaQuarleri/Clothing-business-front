@@ -58,6 +58,8 @@ const ModalAccount = ({
       let totalSale = 0;
       if (customerSelected.totalSale !== undefined) {
         totalSale = customerSelected.totalSale + saleCredit;
+      } else {
+        totalSale = saleCredit;
       }
       const data = { dni: dniValue, totalSale: totalSale };
       dispatch(updateCustomer(data));
