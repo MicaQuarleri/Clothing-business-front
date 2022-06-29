@@ -1,0 +1,13 @@
+.buttonActionEdit img {
+  padding: auto;
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+}
+
+.buttonActionEdit {
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #ffffff;
+}

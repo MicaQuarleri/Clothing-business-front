@@ -1,0 +1,14 @@
+.salesButton {
+  width: 90px;
+  border-radius: 8px;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Veneer three";
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+button:disabled {
+  background-color: #f2f2f2;
+  color:#000000
+}

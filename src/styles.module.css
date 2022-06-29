@@ -1,0 +1,110 @@
+@font-face{
+	font-family: "Veneer three";
+	src: url("../src/font/VeneerThree.ttf") format('truetype');
+}
+
+.modal {
+  position: fixed;
+  z-index: 2;
+  height: 150vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.bodyTable th, td {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  font-family: "RawengulkBold";
+}
+
+.bodyTable th {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  background-color: #e6e6e6;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.bottomContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+
+.buttonAction {
+  border-radius: 15px;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Veneer three";
+  font-size: 20px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.mainContainerForm {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  position: absolute;
+  left: 35%;
+  top: 30%;
+  height: auto;
+  width: 380px;
+  background-color: #d9d9d9;
+  border: 4px solid #a6a6a6;
+  border-radius: 8px;
+}
+
+.mainContainerForm button {
+  margin-left: 335px;
+  margin-top: 5px;
+  width: 10%;
+  background-color: #ffffff;
+  border: 3px solid #a6a6a6;
+  border-radius: 4px;
+  font-size: 20px;
+  font-family: "Veneer three";
+}
+
+.formContainer p {
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: "Veneer three";
+  font-size: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.inputContainer span {
+  color: #e60000;
+  font-weight: lighter;
+}
+
+.formContainer button {
+  margin: auto;
+  margin-bottom: 10px;
+  width: 100px;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Veneer three";
+}
+
+.formContainer button:disabled {
+  background-color: #f2f2f2;
+  color:#000000
+}

@@ -1,0 +1,46 @@
+@font-face{
+	font-family: "RawengulkBold";
+	src: url("../../font/RawengulkBold.otf") format('truetype');
+}
+
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.homeTable {
+  margin: auto;
+  margin-top: 30px;
+  width: 70vw;
+  height: 300px;
+  overflow-y: scroll; 
+}
+
+.homeTable th, .homeTable td {
+  width: 20vw;
+}
+
+.homeTable th:nth-child(2), .homeTable td:nth-child(2) {
+  width:70vw;
+}
+
+.totals {
+  display: flex;
+  width: 20%;
+  text-align: center;
+}
+
+.subTotals {
+  width: 150px;
+  font-family: "RawengulkBold";
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 400px;
+}

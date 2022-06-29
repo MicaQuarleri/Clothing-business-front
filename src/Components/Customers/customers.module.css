@@ -1,0 +1,32 @@
+.customersContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.customersTable {
+  margin: auto;
+  margin-top: 30px;
+  width: 65vw;
+  height: 300px;
+  overflow-y: scroll; 
+}
+
+.customersTable th, .customersTable td {
+  width: 50vw;
+}
+
+.customersTable th:nth-child(2), .customersTable td:nth-child(2),.customersTable th:nth-child(3), .customersTable td:nth-child(3) {
+  width: 90vw;
+}
+
+.customersTable th:nth-child(7), .customersTable td:nth-child(7),.customersTable th:nth-child(8), .customersTable td:nth-child(8) {
+  width: 20vw;
+}
+
+.customersTable th:nth-child(8), .customersTable td:nth-child(8){
+  padding-right: 10px;
+}
+

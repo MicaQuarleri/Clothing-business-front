@@ -1,0 +1,25 @@
+@font-face{
+	font-family: "Vanadine Bold";
+	src: url("../../font/RawengulkBold.otf") format('truetype');
+}
+
+.navBar {
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.navBar ul {
+  list-style: none;
+  font-family: "Vanadine Bold";
+  font-size: 20px;
+}
+
+.navBar li {
+  display: inline;
+  margin-left: 40px;
+}
+
+.link {
+  text-decoration: none;
+  color: #000000;
+}

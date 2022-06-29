@@ -1,0 +1,35 @@
+@font-face{
+	font-family: "Veneer three";
+	src: url("../../../font/VeneerThree.ttf") format('truetype');
+}
+
+.mainContainerSucessNotFound {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  left: 40%;
+  top: 40%;
+  width: 300px;
+  height: 200px;
+  background-color: #d9d9d9;
+  border: 4px solid #a6a6a6;
+  border-radius: 8px;
+  font-family: "Veneer three";
+}
+
+.mainContainerSucessNotFound button {
+  margin-left: 265px;
+  margin-top: 5px;
+  width: 10%;
+  background-color: #ffffff;
+  border: 3px solid #a6a6a6;
+  font-size: 20px;
+  font-family: "Veneer three";
+}
+
+.mainContainerSucessNotFound p {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 30px;
+}

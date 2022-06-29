@@ -1,0 +1,11 @@
+@font-face{
+	font-family: "RawengulkBold";
+	src: url("../../../font/RawengulkBold.otf") format('truetype');
+}
+
+.inputForm {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  font-family: "RawengulkBold";
+}

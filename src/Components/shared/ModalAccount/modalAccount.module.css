@@ -1,0 +1,76 @@
+@font-face{
+	font-family: "Veneer three";
+	src: url("../../../font/VeneerThree.ttf") format('truetype');
+}
+
+@font-face{
+	font-family: "RawengulkBold";
+	src: url("../../../font/RawengulkBold.otf") format('truetype');
+}
+
+.mainContainerAccount {
+  position: absolute;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  left: 40%;
+  top: 20%;
+  width: 300px;
+  height: auto;
+  background-color: #d9d9d9;
+  border: 4px solid #a6a6a6;
+  border-radius: 8px;
+  font-family: "Veneer three";
+}
+
+.mainContainerAccount button {
+  margin-left: 265px;
+  margin-top: 5px;
+  width: 10%;
+  background-color: #ffffff;
+  border: 3px solid #a6a6a6;
+  border-radius: 4px;
+  font-size: 20px;
+  font-family: "Veneer three";
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.information label {
+  font-size: 25px;
+}
+
+.information input {
+  margin-top: 5px;
+}
+
+.information p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.information span {
+  margin-top: 5px;
+  height: 20px;
+  font-family: "RawengulkBold";
+}
+
+.information button {
+  margin: auto;
+  margin-bottom: 10px;
+  width: 100px;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Veneer three";
+}
+
+.information button:disabled {
+  background-color: #f2f2f2;
+  color:#000000
+}
+

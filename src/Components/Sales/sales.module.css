@@ -1,0 +1,15 @@
+.salesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.salesTable table {
+  margin: auto;
+  margin-top: 30px;
+  width: 40vw;
+  height: 300px;
+  overflow-y: scroll; 
+}

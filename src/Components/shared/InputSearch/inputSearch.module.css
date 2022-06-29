@@ -1,0 +1,38 @@
+@font-face{
+	font-family: "Veneer three";
+	src: url("../../../font/VeneerThree.ttf") format('truetype');
+}
+
+@font-face{
+	font-family: "RawengulkBold";
+	src: url("../../../font/RawengulkBold.otf") format('truetype');
+}
+
+.input {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+}
+
+.input label {
+  margin-top: 5px;
+  font-size: 15px;
+  font-family: "RawengulkBold";
+  font-weight: bolder;
+}
+
+.input input {
+  height: 20px;
+  width: 200px;
+  text-align: center;
+}
+
+.input button {
+  width: 65px;
+  border-radius: 8px;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Veneer three";
+  font-size: 15px;
+  letter-spacing: 2px;
+}

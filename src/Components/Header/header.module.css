@@ -1,0 +1,23 @@
+@font-face{
+	font-family: "Veneer three";
+	src: url("../../font/VeneerThree.ttf") format('truetype');
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100px;
+  border-bottom: 5px solid grey;
+}
+
+.headerContainer h1{
+  font-weight: normal;
+  font-family: "Veneer Three";
+  font-size: 70px;
+}
+
+.link {
+  text-decoration: none;
+  color: #000000;
+}
