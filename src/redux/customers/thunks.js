@@ -18,7 +18,7 @@ import {
 
 export const getCustomers = () => (dispatch) => {
   dispatch(getCustomersFetching());
-  return fetch("https://immense-savannah-17243.herokuapp.com/api/customers", {
+  fetch("https://immense-savannah-17243.herokuapp.com/api/customers", {
     method: "GET",
     headers: { "Constente-Type": "application/json" },
   })
@@ -31,13 +31,10 @@ export const getCustomers = () => (dispatch) => {
 
 export const getOneCustomer = (dni) => (dispatch) => {
   dispatch(getOneCustomerFetching());
-  return fetch(
-    `https://immense-savannah-17243.herokuapp.com/api/customers/${dni}`,
-    {
-      method: "GET",
-      headers: { "Constente-Type": "application/json" },
-    }
-  )
+  fetch(`https://immense-savannah-17243.herokuapp.com/api/customers/${dni}`, {
+    method: "GET",
+    headers: { "Constente-Type": "application/json" },
+  })
     .then((data) => {
       if (data.status !== 200) {
         return data.json().then((error) => {
@@ -56,7 +53,7 @@ export const getOneCustomer = (dni) => (dispatch) => {
 
 export const addCustomer = (data) => (dispatch) => {
   dispatch(addCustomerFetching());
-  return fetch(`https://immense-savannah-17243.herokuapp.com/api/customers`, {
+  fetch(`https://immense-savannah-17243.herokuapp.com/api/customers`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -113,13 +110,10 @@ export const updateCustomer = (data) => (dispatch) => {
 
 export const deleteCustomer = (dni) => (dispatch) => {
   dispatch(deleteCustomerFetching());
-  return fetch(
-    `https://immense-savannah-17243.herokuapp.com/api/customers/${dni}`,
-    {
-      method: "DELETE",
-      headers: { "Constente-Type": "application/json" },
-    }
-  )
+  fetch(`https://immense-savannah-17243.herokuapp.com/api/customers/${dni}`, {
+    method: "DELETE",
+    headers: { "Constente-Type": "application/json" },
+  })
     .then((response) => {
       if (response.status !== 200) {
         return response.json().then((error) => {

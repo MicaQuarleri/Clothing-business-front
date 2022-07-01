@@ -4,7 +4,6 @@ import styleShared from "../../styles.module.css";
 import styles from "./customers.module.css";
 import IsLoading from "../shared/IsLoading";
 import InputSearch from "../shared/InputSearch";
-import ModalNotFound from "../shared/ModalNotFound";
 import ModalSucess from "../shared/ModalSucess";
 import ActionButton from "../shared/ActionButton";
 import FormCustomer from "../shared/FormCustomer";
@@ -20,7 +19,6 @@ const Customers = () => {
   const [totalSaleValue, setTotalSaleValue] = useState("");
   const [totalPayValue, setTotalPayValue] = useState("");
   const [textSucess, setTextSucess] = useState("");
-  const [showModalNotFound, setShowModalNotFound] = useState(false);
   const [showModalSucess, setShowModalSucess] = useState(false);
   const [showForm, setShowForm] = useState(false);
   const [action, setAction] = useState("");
@@ -33,10 +31,6 @@ const Customers = () => {
   useEffect(() => {
     dispatch(getCustomers());
   }, [dispatch]);
-
-  const closeModalNotFound = () => {
-    setShowModalNotFound(false);
-  };
 
   const addCustomer = () => {
     setAction("add");
@@ -102,11 +96,6 @@ const Customers = () => {
         totalPayValue={totalPayValue}
         totalSaleValue={totalSaleValue}
       />
-      <ModalNotFound
-        openModalNotFound={showModalNotFound}
-        closeModalNotFound={closeModalNotFound}
-        text="Dni does not exist"
-      />
       <ModalSucess
         openModal={showModalSucess}
         text={textSucess}
@@ -119,7 +108,7 @@ const Customers = () => {
             setInputValue(event.target.value);
           }}
         />
-        <ActionButton onClick={addCustomer} value={"+"} action={action} />
+        <ActionButton onClick={addCustomer} value={"+"} action="add" />
       </div>
       <div className={styles.customersTable}>
         <table className={styleShared.bodyTable}>

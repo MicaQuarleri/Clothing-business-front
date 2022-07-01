@@ -18,7 +18,7 @@ import {
 
 export const getProducts = () => (dispatch) => {
   dispatch(getProductsFetching());
-  return fetch("https://immense-savannah-17243.herokuapp.com/api/products/", {
+  fetch("https://immense-savannah-17243.herokuapp.com/api/products/", {
     method: "GET",
     headers: { "Constente-Type": "application/json" },
   })
@@ -29,13 +29,10 @@ export const getProducts = () => (dispatch) => {
 
 export const getOneProduct = (sku) => (dispatch) => {
   dispatch(getOneProductFetching());
-  return fetch(
-    `https://immense-savannah-17243.herokuapp.com/api/products/${sku}`,
-    {
-      method: "GET",
-      headers: { "Constente-Type": "application/json" },
-    }
-  )
+  fetch(`https://immense-savannah-17243.herokuapp.com/api/products/${sku}`, {
+    method: "GET",
+    headers: { "Constente-Type": "application/json" },
+  })
     .then((data) => data.json())
     .then((response) => dispatch(getOneProductFulfilled(response)))
     .catch((error) => dispatch(getOneProductRejected(error)));
@@ -43,7 +40,7 @@ export const getOneProduct = (sku) => (dispatch) => {
 
 export const addProduct = (data) => (dispatch) => {
   dispatch(addProductFetching());
-  return fetch("https://immense-savannah-17243.herokuapp.com/api/products", {
+  fetch("https://immense-savannah-17243.herokuapp.com/api/products", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -61,13 +58,9 @@ export const addProduct = (data) => (dispatch) => {
       return data.json();
     })
     .then((response) => {
-      dispatch(addProductFulfilled());
-      return response;
+      dispatch(addProductFulfilled(response));
     })
-    .catch((error) => {
-      dispatch(addProductRejected(error));
-      return error;
-    });
+    .catch((error) => dispatch(addProductRejected(error)));
 };
 
 export const deleteProduct = (sku) => (dispatch) => {

@@ -25,7 +25,7 @@ export const getSales = () => (dispatch) => {
 
 export const addSale = (data) => (dispatch) => {
   dispatch(addSaleFetching());
-  return fetch(`https://immense-savannah-17243.herokuapp.com/api/sales`, {
+  fetch(`https://immense-savannah-17243.herokuapp.com/api/sales`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({

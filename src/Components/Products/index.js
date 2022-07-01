@@ -29,7 +29,23 @@ const Products = () => {
 
   const addProduct = () => {
     setAction("add");
+    setShowForm(true);
     setTextSucess("Product added");
+  };
+
+  const productDelete = (sku) => {
+    dispatch(deleteProduct(sku));
+    setTextSucess("Product deleted");
+    setShowModalSucess(true);
+    setTimeout(closeModalSucess, 1100);
+  };
+
+  const editProduct = (sku, description, price) => {
+    setAction("edit");
+    setSkuValue(sku);
+    setDescriptionValue(description);
+    setPriceValue(price);
+    setTextSucess("Product updated");
     setShowForm(true);
   };
 
@@ -51,22 +67,6 @@ const Products = () => {
     if (action === "edit") {
       setTimeout(refresh);
     }
-    setTimeout(closeModalSucess, 1100);
-  };
-
-  const editProduct = (sku, description, price) => {
-    setAction("edit");
-    setTextSucess("Product updated");
-    setSkuValue(sku);
-    setDescriptionValue(description);
-    setPriceValue(price);
-    setShowForm(true);
-  };
-
-  const productDelete = (sku) => {
-    dispatch(deleteProduct(sku));
-    setTextSucess("Product deleted");
-    setShowModalSucess(true);
     setTimeout(closeModalSucess, 1100);
   };
 
@@ -97,7 +97,7 @@ const Products = () => {
             setInputValue(event.target.value);
           }}
         />
-        <ActionButton value={"+"} onClick={addProduct} />
+        <ActionButton value={"+"} onClick={addProduct} action="add" />
       </div>
       <div className={styles.productsTable}>
         <table className={styleShared.bodyTable}>
