@@ -1,4 +1,4 @@
-This application allows you to keep track of the sales, products and available customers of a clothing store.
+This proyect allows you to keep track of the sales, products and available customers of a clothing store.
 
 It was thought for stores that works in small cities where there is a possibility that customers do not pay at the moment of the sale, so an account is created in which there is a resgister of the ammount of money the customer owes and the money it has payd.
 
@@ -14,4 +14,4 @@ In the tab "Sales", the user can see the sales of each date.
 
 In the tab "Products", the user can see the products created, their information and also add edit or delete a product.
 
-All this was deployed and is it possible to see it in te following url:https://clothing-business-front.vercel.app/
+All this was deployed and is it possible to see it in the following url:https://clothing-business-front.vercel.app/
