@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import moment from "moment";
 import styles from "./homePage.module.css";
 import styleShared from "../../styles.module.css";
-import { getProducts } from "../../redux/products/thunks";
 import ModalNotFound from "../shared/ModalNotFound";
 import ModalAccount from "../shared/ModalAccount";
 import ModalSucess from "../shared/ModalSucess";
 import InputSearch from "../shared/InputSearch";
 import ActionButton from "../shared/ActionButton";
 import SalesButton from "../shared/SalesButton";
+import { getProducts } from "../../redux/products/thunks";
 import { getSales, updateSale, addSale } from "../../redux/sales/thunks";
 import { useSelector, useDispatch } from "react-redux";
 

@@ -1,12 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./modalAccount.module.css";
 import styleShared from "../../../styles.module.css";
 import FormCustomer from "../FormCustomer";
 import ModalSucess from "../../shared/ModalSucess";
-import {
-  getOneCustomer,
-  updateCustomer,
-} from "../../../redux/customers/thunks";
+import { updateCustomer, getCustomers } from "../../../redux/customers/thunks";
 import { validateDni } from "../../../services/validateData";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -23,22 +20,26 @@ const ModalAccount = ({
   const [showModalSucess, setShowModalSucess] = useState(false);
 
   const dispatch = useDispatch();
-  const customerSelected = useSelector((store) => store.customers.selected);
-  const errorSelected = useSelector((store) => store.customers.error);
-  const errorMessage = useSelector((store) => store.customers.errorMessage);
+  const customers = useSelector((store) => store.customers.list);
+
+  useEffect(() => {
+    dispatch(getCustomers());
+  }, []);
 
   const onChange = (event) => {
     setDniValue(event.target.value);
-    dispatch(getOneCustomer(event.target.value));
   };
 
   const validateDniInput = () => {
     const error = validateDni(dniValue);
     if (error === "") {
-      if (customerSelected !== "" && errorSelected === false) {
+      const customerSelected = customers.find(
+        (customer) => customer.dni === dniValue
+      );
+      if (customerSelected) {
         setDisabled(false);
       } else {
-        setErrorDni(errorMessage);
+        setErrorDni("The customer`s dni does not exist");
         setDisabled(false);
       }
     } else {
@@ -56,6 +57,9 @@ const ModalAccount = ({
     event.preventDefault();
     if (errorDni === "") {
       let totalSale = 0;
+      const customerSelected = customers.find(
+        (customer) => customer.dni === dniValue
+      );
       if (customerSelected.totalSale !== undefined) {
         totalSale = customerSelected.totalSale + saleCredit;
       } else {
@@ -80,8 +84,12 @@ const ModalAccount = ({
     setTimeout(closeModalSucess, 1100);
   };
 
+  const onSubmit = (formValues) => {
+    console.log(formValues);
+  };
+
   const closeFormX = () => {
-    setErrorDni("The customer`s dni does not exist");
+    setErrorDni("");
     setOpenform(false);
   };
 
